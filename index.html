@@ -91,6 +91,30 @@
       box-shadow: var(--shadow-medium);
     }
 
+    .categoria-select {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 8px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      box-shadow: inset 0 0 0 1px var(--glass-border);
+      font-size: 0.9rem;
+      transition: var(--transition);
+      cursor: pointer;
+      min-width: 100px;
+      color: var(--text-primary);
+    }
+
+    .categoria-select[value="ingles"] {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+    }
+
+    .categoria-select[value="programacion"] {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
     th, td {
       padding: 15px 10px;
       text-align: center;
@@ -247,35 +271,35 @@
       <tr><td>7:00 – 8:00 AM</td><td>Aseo + preparación</td><td>Otro</td><td style="background: rgba(245, 245, 245, 0.8); font-style: italic;">-</td></tr>
       
       <tr class="section-title"><td colspan="4">INGLÉS BLOQUE 1</td></tr>
-      <tr><td>8:00 – 8:25 AM</td><td>P1</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>8:30 – 8:55 AM</td><td>P2</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>8:00 – 8:25 AM</td><td>P1</td><td><select class="categoria-select" data-pomodoro="1"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="1"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>8:30 – 8:55 AM</td><td>P2</td><td><select class="categoria-select" data-pomodoro="2"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="2"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
       
       <tr class="section-title"><td colspan="4">DESAYUNO</td></tr>
       <tr><td>9:00 – 9:40 AM</td><td>Preparar y tomar desayuno</td><td>Otro</td><td style="background: rgba(245, 245, 245, 0.8); font-style: italic;">-</td></tr>
       
       <tr class="section-title"><td colspan="4">PROGRAMACIÓN BLOQUE 2</td></tr>
-      <tr><td>9:40 – 10:05 AM</td><td>P3</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>10:10 – 10:35 AM</td><td>P4</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>10:35 – 11:05 AM</td><td>P5</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>9:40 – 10:05 AM</td><td>P3</td><td><select class="categoria-select" data-pomodoro="3"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="3"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>10:10 – 10:35 AM</td><td>P4</td><td><select class="categoria-select" data-pomodoro="4"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="4"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>10:35 – 11:05 AM</td><td>P5</td><td><select class="categoria-select" data-pomodoro="5"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="5"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
       
       <tr class="section-title"><td colspan="4">INGLÉS BLOQUE 3</td></tr>
-      <tr><td>11:05 – 11:30 AM</td><td>P6</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>11:35 – 12:00 PM</td><td>P7</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>12:05 – 12:30 PM</td><td>P8</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>12:35 – 1:00 PM</td><td>P9</td><td>Inglés</td><td><select class="realizado" data-categoria="ingles"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>11:05 – 11:30 AM</td><td>P6</td><td><select class="categoria-select" data-pomodoro="6"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="6"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>11:35 – 12:00 PM</td><td>P7</td><td><select class="categoria-select" data-pomodoro="7"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="7"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>12:05 – 12:30 PM</td><td>P8</td><td><select class="categoria-select" data-pomodoro="8"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="8"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>12:35 – 1:00 PM</td><td>P9</td><td><select class="categoria-select" data-pomodoro="9"><option value="ingles">Inglés</option><option value="programacion">Programación</option></select></td><td><select class="realizado" data-categoria="ingles" data-pomodoro="9"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
       
       <tr class="section-title"><td colspan="4">ALMUERZO</td></tr>
       <tr><td>1:00 - 2:00 PM</td><td>Almorzar</td><td>Otro</td><td style="background: rgba(245, 245, 245, 0.8); font-style: italic;">-</td></tr>
       
       <tr class="section-title"><td colspan="4">PROGRAMACIÓN BLOQUE 4</td></tr>
-      <tr><td>2:00 – 2:25 PM</td><td>P10</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>2:30 – 2:55 PM</td><td>P11</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>3:00 – 3:25 PM</td><td>P12</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>3:30 - 3:55 PM</td><td>P13</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>4:00 - 4:25 PM</td><td>P14</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>4:30 - 4:55 PM</td><td>P15</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>5:00 - 5:25 PM</td><td>P16</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
-      <tr><td>5:30 - 5:55 PM</td><td>P17</td><td>Programación</td><td><select class="realizado" data-categoria="programacion"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>2:00 – 2:25 PM</td><td>P10</td><td><select class="categoria-select" data-pomodoro="10"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="10"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>2:30 – 2:55 PM</td><td>P11</td><td><select class="categoria-select" data-pomodoro="11"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="11"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>3:00 – 3:25 PM</td><td>P12</td><td><select class="categoria-select" data-pomodoro="12"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="12"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>3:30 - 3:55 PM</td><td>P13</td><td><select class="categoria-select" data-pomodoro="13"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="13"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>4:00 - 4:25 PM</td><td>P14</td><td><select class="categoria-select" data-pomodoro="14"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="14"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>4:30 - 4:55 PM</td><td>P15</td><td><select class="categoria-select" data-pomodoro="15"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="15"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>5:00 - 5:25 PM</td><td>P16</td><td><select class="categoria-select" data-pomodoro="16"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="16"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
+      <tr><td>5:30 - 5:55 PM</td><td>P17</td><td><select class="categoria-select" data-pomodoro="17"><option value="programacion">Programación</option><option value="ingles">Inglés</option></select></td><td><select class="realizado" data-categoria="programacion" data-pomodoro="17"><option value="">-</option><option value="1">✅</option><option value="0">❌</option></select></td></tr>
       
       <tr class="section-title"><td colspan="4">VIDEOJUEGOS</td></tr>
       <tr><td>6:00 - 8:00 PM</td><td>2 horas libres (Videojuegos)</td><td>Otro</td><td style="background: rgba(245, 245, 245, 0.8); font-style: italic;">-</td></tr>
@@ -488,17 +512,44 @@
     }
 
     function guardarDatos(fecha) {
-      const datos = selects.map(s => ({
-        value: s.value,
-        categoria: s.getAttribute('data-categoria') || "otro"
-      }));
+      const datos = selects.map(s => {
+        const pomodoroNum = s.getAttribute('data-pomodoro');
+        let categoria = s.getAttribute('data-categoria') || "otro";
+        
+        // Si hay un selector de categoría específico, usar ese valor
+        if (pomodoroNum) {
+          const categoriaSelect = document.querySelector(`.categoria-select[data-pomodoro="${pomodoroNum}"]`);
+          if (categoriaSelect) {
+            categoria = categoriaSelect.value;
+          }
+        }
+        
+        return {
+          value: s.value,
+          categoria: categoria,
+          pomodoro: pomodoroNum
+        };
+      });
       
-      localData[fecha] = { datos: datos, timestamp: Date.now() };
+      // Guardar también los valores de los selectores de categoría
+      const categoriasData = {};
+      document.querySelectorAll('.categoria-select').forEach(cs => {
+        const pomodoroNum = cs.getAttribute('data-pomodoro');
+        if (pomodoroNum) {
+          categoriasData[pomodoroNum] = cs.value;
+        }
+      });
+      
+      localData[fecha] = { 
+        datos: datos, 
+        categorias: categoriasData,
+        timestamp: Date.now() 
+      };
       localStorage.setItem('pomodoroData', JSON.stringify(localData));
       
       // Guardar en Supabase también
       if (supabase) {
-        saveToSupabase(fecha, datos);
+        saveToSupabase(fecha, { datos: datos, categorias: categoriasData });
       }
     }
 
@@ -507,8 +558,19 @@
       
       if (localData[fecha]) {
         const datos = localData[fecha].datos;
+        const categorias = localData[fecha].categorias || {};
+        
+        // Cargar los valores de realizado
         selects.forEach((s, i) => {
           if (datos[i]) s.value = datos[i].value || "";
+        });
+        
+        // Cargar las categorías seleccionadas
+        document.querySelectorAll('.categoria-select').forEach(cs => {
+          const pomodoroNum = cs.getAttribute('data-pomodoro');
+          if (pomodoroNum && categorias[pomodoroNum]) {
+            cs.value = categorias[pomodoroNum];
+          }
         });
       }
       calcularTotales();
@@ -519,9 +581,19 @@
       
       selects.forEach(s => {
         if (s.value === "1") {
-          const categoria = s.getAttribute('data-categoria');
-          if (categoria === "ingles") ingles++;
-          if (categoria === "programacion") prog++;
+          // Buscar el selector de categoría correspondiente
+          const pomodoroNum = s.getAttribute('data-pomodoro');
+          if (pomodoroNum) {
+            const categoriaSelect = document.querySelector(`.categoria-select[data-pomodoro="${pomodoroNum}"]`);
+            const categoria = categoriaSelect ? categoriaSelect.value : s.getAttribute('data-categoria');
+            if (categoria === "ingles") ingles++;
+            if (categoria === "programacion") prog++;
+          } else {
+            // Fallback para elementos sin data-pomodoro (rutinas no editables)
+            const categoria = s.getAttribute('data-categoria');
+            if (categoria === "ingles") ingles++;
+            if (categoria === "programacion") prog++;
+          }
         }
       });
       
@@ -613,7 +685,12 @@
       }
     }
 
-    // Event listeners
+    fechaInput.addEventListener('change', () => {
+      cargarDatos(fechaInput.value);
+      calcularTotalesHistoricos();
+    });
+
+    // Event listeners para selects de realizado
     selects.forEach(s => {
       s.addEventListener('change', () => {
         guardarDatos(fechaInput.value);
@@ -622,14 +699,18 @@
       });
     });
 
-    fechaInput.addEventListener('change', () => {
-      cargarDatos(fechaInput.value);
-      calcularTotalesHistoricos();
-    });
-
     // Inicialización
     document.addEventListener('DOMContentLoaded', async function() {
       fechaInput.value = getTodayStr();
+      
+      // Agregar event listeners para selectores de categoría después de que el DOM esté listo
+      document.querySelectorAll('.categoria-select').forEach(cs => {
+        cs.addEventListener('change', () => {
+          guardarDatos(fechaInput.value);
+          calcularTotales();
+          calcularTotalesHistoricos();
+        });
+      });
       
       // Cargar datos desde Supabase primero si está configurado
       if (supabase) {
