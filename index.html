@@ -430,12 +430,14 @@
       if (!supabase) return;
       
       try {
+        const now = new Date().toISOString();
         const { error } = await supabase
           .from('pomodoro_data')
           .upsert({
             fecha: fecha,
             datos: datos,
-            updated_at: new Date().toISOString()
+            created_at: now,
+            updated_at: now
           }, {
             onConflict: 'fecha'
           });
